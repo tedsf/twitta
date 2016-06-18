@@ -1,0 +1,42 @@
+<div class="navbar">
+	<form method="post" action="/users/results">
+		<input type="text" name="search">
+		<input type="submit" value="Search" class="button">
+	</form>
+
+	<form>
+		<input type="submit" value="Log Out" id="log-out-button" formaction="/logout" formmethod="post">
+	</form>
+
+	<form method="get" action="/users/stream">
+	<input type="submit" value="Stream" id="stream-button" class="button">
+</form>
+</div>
+
+<div class="main">
+	<%= @user.first_name %>
+	<%= @user.last_name %>
+	<h1><%= @user.username %></h1>
+	<%= @user.about_me %>
+	<%= @user.location %>
+	<form method="get" action="/users/<%= @user.id %>/edit">
+		<input type="submit" value="Edit Profile">
+	</form>
+
+	<form method="post" action="/users/post">
+		<input type="hidden" name="id" value="<%= @user.id %>">
+		<input id="twit-text" type="text" name="Twit" placeholder="Got something to say?">
+		<input type="submit" value="Twit" class="button">
+	</form>
+
+<div id="tweets">
+    <% if @posts != nil %>
+    <% @posts.reverse.each do |post| %>
+    <p class="triangle-isosceles"><%= post.content %></p>
+    <% end %>
+    <% end %>
+  </div>
+
+
+</div>
+
