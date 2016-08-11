@@ -2,6 +2,8 @@
 
 ![Twitta Logo](https://github.com/jlhall/twitta/blob/master/public/img/twitta.jpg "Twitta Logo")
 
-Twitter clone group project for SF Nighthawks 2016
+Who: @jhall @Mikael491 @MikeyMoore @tedsf
 
--Built over two days in Summer 2016 as part of the DevBootcamp Phase 2 course-work
+What: Twitter clone group project for SF Nighthawks 2016
+
+When: Built over two days in Summer 2016 as part of the DevBootcamp Phase 2 course-work
